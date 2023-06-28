@@ -1,0 +1,161 @@
+
+
+.intro {
+    height: 100vh;
+}
+
+.parent {
+    display: flex;
+    height: 90vh;
+    background-color: #000;
+}
+
+.child1 {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.logoimg {
+	animation-name: floating;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	margin-left: 30px;
+	margin-top: 5px;
+  opacity: 0.6;
+}
+
+.logoimg:hover {
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+.logoimg:not(:hover){
+  opacity: 0.6;
+  transition: all 0.5s ease-out;
+}
+
+@keyframes floating {
+	0% { transform: translate(0, 0px); }
+	50% { transform: translate(0, 20px); }
+	100% { transform: translate(0, 0px); }
+}
+
+
+
+#hmpgimg {
+    width: 37vw;
+    display: block;
+    margin: auto;
+    min-width: 300px;
+
+}
+
+.child2 {
+    width: 50vw;
+}
+
+@media (max-width: 800px){
+    .parent {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .child1 {
+      height: 0vh;
+        width: 100vw;
+        display: block;
+        margin: auto;
+        opacity: 0.3;
+        padding-top: 25%;
+
+    }
+    .child2 {
+      height: 100vh;
+        width: 100vw;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .contact {
+        margin-top: 25px;
+    }
+
+}
+
+
+.type {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding-top: 40px;
+    margin-top: 50px;
+    color: rgb(14, 158, 214);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  
+  .cta {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .cta {
+    position: relative;
+    margin: auto;
+    padding: 8px 12px;
+    transition: all 0.2s ease;
+  }
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgba(255, 171, 157, 0.5);
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+  }
+  .cta span {
+    position: relative;
+    font-size: 11px;
+    line-height: 10px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  .cta:hover:before {
+    width: 100%;
+    background: #ffab9d;
+    color: aliceblue;
+  }
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  .cta:active {
+    transform: scale(0.96);
+  }
+  
