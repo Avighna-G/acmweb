@@ -160,10 +160,11 @@ li.navit,li.navitselec, li.navitgalselec{
         list-style: none;
         text-align: center;
         z-index: 1;
-        margin-top: -80px;
+        margin-top: -60px;
         margin-right: 53px;
         margin-left: -47px;
         position: relative;
+        transition: 0.3s ease-in-out;
         
     }
 
